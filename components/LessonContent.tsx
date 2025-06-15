@@ -56,6 +56,28 @@ export default function LessonContent({
     setIsPlaying(!isPlaying)
   }
   
+  const handleBack = () => {
+    console.log('⬅️ Back button clicked - cleaning up audio state')
+    // Stop current audio
+    if (currentAudioElement) {
+      currentAudioElement.pause()
+      setIsPlaying(false)
+    }
+    // Clean up audio URLs
+    audioUrls.forEach(url => URL.revokeObjectURL(url))
+    // Reset all state
+    setAudioUrls([])
+    setAudioElements([])
+    setCurrentAudioElement(null)
+    setCurrentAudioIndex(0)
+    setIsPlaying(false)
+    setGeneratedParagraphCount(0)
+    setIsGeneratingAudio(false)
+    setParagraphs([])
+    // Navigate back
+    onBack()
+  }
+
   const handleStartOver = () => {
     console.log('🔁 Starting over - going back to topic selection')
     // Stop current audio
@@ -254,7 +276,7 @@ export default function LessonContent({
     <div className="min-h-screen flex flex-col bg-white pb-32">
       <div className="p-6">
         <button 
-          onClick={onBack}
+          onClick={handleBack}
           className="mb-4 p-3 rounded-full hover:bg-gray-100 transition-colors"
         >
           <ArrowLeft className="w-6 h-6" />
