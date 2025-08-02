@@ -33,6 +33,7 @@ Learnify transforms any topic into bite-sized, engaging audio lessons (3-5 minut
 - **AI Integration**: OpenAI GPT-4 for content generation
 - **Audio**: Resemble AI for text-to-speech synthesis
 - **Deployment**: Vercel
+- **Authentication**: Basic auth middleware
 
 ## Getting Started
 
@@ -84,7 +85,8 @@ learnify/
 │   ├── LessonContent.tsx     # Audio playback screen
 │   └── AudioPlayer.tsx       # Audio controls
 ├── lib/
-   └── openai.ts            # OpenAI integration
+│   └── openai.ts            # OpenAI integration
+└── middleware.ts            # Authentication middleware
 ```
 
 ## Contributing
