@@ -57,7 +57,7 @@ export default function TopicSelection({ onNext }: TopicSelectionProps) {
           <Button 
             onClick={handleSubmit} 
             disabled={!topic.trim()}
-            className="w-full h-16 text-xl rounded-2xl bg-blue-500 hover:bg-blue-600 disabled:bg-gray-200 disabled:text-gray-400 transition-colors"
+            className="w-full h-16 text-xl rounded-2xl bg-green-500 hover:bg-green-600 disabled:bg-gray-200 disabled:text-gray-400 transition-colors"
           >
             Next
           </Button>

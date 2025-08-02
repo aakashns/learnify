@@ -104,7 +104,7 @@ export default function DepthSelection({ topic, onNext, onBack, error }: DepthSe
         <div className="max-w-md mx-auto">
           <Button 
             onClick={handleSubmit}
-            className="w-full h-16 text-xl rounded-2xl bg-blue-500 hover:bg-blue-600 transition-colors"
+            className="w-full h-16 text-xl rounded-2xl bg-green-500 hover:bg-green-600 transition-colors"
           >
             Next
           </Button>
